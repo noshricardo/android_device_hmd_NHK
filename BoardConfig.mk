@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/fairphone/FP4
+DEVICE_PATH := device/hmd/NHK
 
 # A/B
 AB_OTA_UPDATER := true
@@ -22,16 +22,16 @@ AB_OTA_PARTITIONS += \
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-2a-dotprod
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a76
+TARGET_CPU_VARIANT := cortex-a55
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a76
+TARGET_2ND_CPU_VARIANT := cortex-a55
 
 # Audio
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
@@ -86,8 +86,8 @@ BOARD_KERNEL_CMDLINE := \
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CLANG_VERSION := r530567
-TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig vendor/debugfs.config vendor/fairphone/FP4.config
-TARGET_KERNEL_SOURCE := kernel/fairphone/sm7225
+TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig vendor/debugfs.config vendor/hmd/NHK.config
+TARGET_KERNEL_SOURCE := kernel/hmd/sm4450
 
 # Kernel modules - Audio
 TARGET_MODULE_ALIASES += \
@@ -208,4 +208,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
-include vendor/fairphone/FP4/BoardConfigVendor.mk
+include vendor/hmd/NHK/BoardConfigVendor.mk

@@ -18,8 +18,8 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/fairphone/FP4',
-    'hardware/qcom-caf/sm8250',
+    'device/hmd/NHK',
+#    'hardware/qcom-caf/sm4450', does not exist
     'hardware/qcom-caf/wlan',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
@@ -70,12 +70,12 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'FP4',
-    'fairphone',
+    'NHK',
+    'hmd',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-    add_firmware_proprietary_file=True,
+    #add_firmware_proprietary_file=True,
 )
 
 if __name__ == '__main__':
