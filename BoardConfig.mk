@@ -44,7 +44,7 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := FP4
+TARGET_BOOTLOADER_BOARD_NAME := NHK
 
 # Display
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
@@ -86,7 +86,7 @@ BOARD_KERNEL_CMDLINE := \
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CLANG_VERSION := r530567
-TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig vendor/debugfs.config vendor/hmd/NHK.config
+TARGET_KERNEL_CONFIG := vendor/nighthawk_consolidate.config
 TARGET_KERNEL_SOURCE := kernel/hmd/sm4450
 
 # Kernel modules - Audio
